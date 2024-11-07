@@ -17,6 +17,7 @@ const FetchWeather = () => {
     
     try {
       const response = await axios.get(geocodeUrl);
+      console.log(response.data.results , "response")
       if (response.data.results.length > 0) {
         const { latitude, longitude } = response.data.results[0];
         const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
@@ -27,6 +28,7 @@ const FetchWeather = () => {
         setError('City not found');
       }
     } catch (err) {
+        console.log(err.message , "error")
       setError('Error fetching weather data');
     }
   };
