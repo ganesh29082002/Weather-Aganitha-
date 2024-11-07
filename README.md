@@ -11,10 +11,10 @@
 Here are some screenshots of the UI:
 
 ### Home Screen
-![Home Screen](path/to/home_screen_image.png)
+![Home Screen](src/assets/image.png)
 
 ### Weather Search
-![Weather Search](path/to/weather_search_image.png)
+![Weather Search](src/assets/image2.png)
 
 ## Getting Started
 
