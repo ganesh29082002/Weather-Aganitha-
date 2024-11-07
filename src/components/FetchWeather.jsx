@@ -13,6 +13,8 @@ const FetchWeather = () => {
   };
 
   const fetchWeather = async () => {
+    // here i am not using .enc as it might cause problem  while deploying code on stackblitz
+    // to avoid complexity i ignore process.env.VITE_APP_GEO_API
     const geocodeUrl = `https://geocoding-api.open-meteo.com/v1/search?name=${city}&count=1&language=en`;
     
     try {
@@ -20,6 +22,9 @@ const FetchWeather = () => {
       console.log(response.data.results , "response")
       if (response.data.results.length > 0) {
         const { latitude, longitude } = response.data.results[0];
+
+    // to avoid complexity i ignore process.env.VITE_APP_OPEN_METRO_API
+
         const weatherUrl = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
         const weatherResponse = await axios.get(weatherUrl);
         setWeatherData(weatherResponse.data.current_weather);
