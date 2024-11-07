@@ -7,7 +7,10 @@
 - **Search by City**: Simply enter a city name to see the weather information.
 - **Responsive Design**: Optimized for desktop and mobile views.
 
-## Screenshots
+## Screenshots and url
+priview 
+https://stackblitz.com/github/ganesh29082002/Weather-Aganitha-?file=README.md
+
 Here are some screenshots of the UI:
 
 ### Home Screen
